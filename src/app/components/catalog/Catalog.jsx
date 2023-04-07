@@ -31,7 +31,7 @@ export default function Catalog ( props ) {
               src={ i.src } 
               alt={ i.alt } 
               title={ i.title }
-              price={ i.price }
+              price={ i.price + " MXN" }
             />) 
           }
         </div>
