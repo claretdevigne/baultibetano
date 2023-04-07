@@ -1,0 +1,12 @@
+— SPA —
+HEADER -> BARRA DE CONTACTOS + NAVIGATOR
+- INICIO
+- NOVEDADES
+- CATÁLOGO -> Lista por categoría             --> X
+- TOP VENTAS
+- REBAJAS
+- FOOTER
+
+Funcionalidades
+- Escribe a MSG, WS o IG
+- Carrito de compra
