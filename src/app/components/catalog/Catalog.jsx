@@ -6,9 +6,15 @@ export default function Catalog ( props ) {
     <>
       <h2>Catálogo</h2>
       {
-        (!props.images) ?
+        (!props.data) ?
         <p>No images</p> :
-        props.images.map((i, k) => <Product key={ k } img={ i } />)
+        props.data.map((i, k) => <Product 
+          key={ k } 
+          src={ i.src } 
+          alt={ i.alt } 
+          title={ i.title }
+          price={ i.price }
+        />)
       }
     </>
   )
