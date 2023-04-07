@@ -7,7 +7,7 @@ export default function Catalog ( props ) {
       <h2>Catálogo</h2>
       {
         (!props.data) ?
-        <p>No images</p> :
+        <p>No products</p> :
         props.data.map((i, k) => <Product 
           key={ k } 
           src={ i.src } 

@@ -1,7 +1,10 @@
 import React from 'react'
+import Catalog from './components/catalog/Catalog'
+import { data } from '../data'
 
 export default function App() {
+
   return (
-    <div>App</div>
+    <Catalog data={ data }/>
   )
 }
