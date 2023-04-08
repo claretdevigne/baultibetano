@@ -3,7 +3,7 @@ import { AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY } from "../../credentials"
 
 const params = {
   TableName: 'baultibetano-product-data',
-};
+}
 
 class IConnectDB {
   connect () {

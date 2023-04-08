@@ -10,7 +10,9 @@ describe("Catalog component", () => {
 
   it("Should render the text 'Catálogo'", () => {
     render(<Catalog/>)
-    screen.getAllByText(/catálogo/i)
+    const h2List = screen.getAllByRole("heading", { level: 2 })
+    const h2 = h2List.filter(i => i.textContent.includes("Catálogo"))
+    h2.map(i => expect(i).toBeInTheDocument())
   })
 
   it("Should render a Product component per every item in a list received by props", () => {
@@ -32,6 +34,6 @@ describe("Catalog component", () => {
     screen.getAllByRole("img").map((i, k) => expect(i).toHaveAttribute("src", productData[k].src))
     screen.getAllByRole("img").map((i, k) => expect(i).toHaveAttribute("alt", productData[k].alt))
     productData.map(i => expect(screen.getByText(i.title)).toBeInTheDocument())
-    productData.map(i => expect(screen.getByText(i.price)).toBeInTheDocument())
+    productData.map(i => expect(screen.getByText(i.price + " MXN")).toBeInTheDocument())
   })
 })

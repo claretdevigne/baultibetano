@@ -1,10 +1,11 @@
 — SPA —
 HEADER -> BARRA DE CONTACTOS + NAVIGATOR
-- INICIO
-- NOVEDADES
-- CATÁLOGO -> Lista por categoría             --> X
-- TOP VENTAS
-- REBAJAS
+- INICIO ->
+- NOVEDADES X
+- CATÁLOGO             READY TODO: Lista por categoría
+- PRODUCT              TODO: CONFIGURAR CLIC PARA MÁS INFORMACIÓN
+- TOP VENTAS X
+- REBAJAS X
 - FOOTER
 
 Funcionalidades

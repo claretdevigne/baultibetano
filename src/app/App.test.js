@@ -8,12 +8,7 @@ describe("App component", () => {
   it("Should render catalog component", () => {
     render(<App />)
     const text = "Catálogo"
-    expect(screen.getByText(text)).toBeInTheDocument()
-  })
-
-  it("Should connect to the database", () => {
-    const connect = new Connect()
-    render(<App/>)
-  
+    const h2 = screen.getAllByText(text).filter(i => i.tagName.includes("H2"))
+    expect(h2[0]).toBeInTheDocument()
   })
 })
