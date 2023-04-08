@@ -18,7 +18,7 @@ export default function Managment( props ) {
     setSelection(e.target.value)
   }
 
-  useEffect(() => {
+  const handleFilters = () => {
     if (buscador.length > 0) {
       if (selection !== "ALL") {
         const filter = props.data.filter(i => i.title.toLowerCase().includes(buscador.toLowerCase()) && i.status.toUpperCase().includes(selection))
@@ -35,13 +35,21 @@ export default function Managment( props ) {
         setData(props.data)
       }
     }
+  }
+
+  useEffect(() => {
+    handleFilters()
   }, [props.data, buscador, selection])
 
   return (
-    <>
-      <h2>Management</h2>
+    <div style={{ backgroundColor: "#C7A33A", minHeight: "100vh" }}>
+      <div className='d-flex align-items-center justify-content-between' style={{ height: "10vh", width: "95%", margin: "0 auto" }}>
+        <img style={{ width: 120 }} src="https://raw.githubusercontent.com/claretdevigne/baultibetano-data/main/branding/title.png" alt="Baúl Tibetano" />
+        <h2>Control de inventario</h2>
+        <div></div>
+      </div>
       <ManagementMenu handleChange={ handleChange } handleSelect={ handleSelect }/>
       <ManagementList data={ data }/>
-    </>
+    </div>
   )
 }

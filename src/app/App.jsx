@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Catalog from './components/catalog/Catalog'
 import Connect from './database/database'
 import Header from './components/header/Header'
-import Managment from './components/management/Managment'
+import Management from './components/management/Management'
 
 export default function App() {
 
@@ -25,7 +25,7 @@ export default function App() {
 
   return (
       <>
-        <Managment data={ data }/>
+        <Management data={ data }/>
         {/* <Header />
         <Catalog data={ data }/> */}
       </>
